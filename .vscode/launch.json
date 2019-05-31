@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}\\Week 1\\singleton-primitiveTypes.js"
+            "program": "${workspaceFolder}\\Week 1\\singleton-types-values-variables.js"
         }
     ]
 }
