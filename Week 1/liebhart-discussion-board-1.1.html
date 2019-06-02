@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mistakes</title>
+</head>
+<body>
+  <p id="nums"></p>
+  <!-- this button is used to run the runPrint() sort function -->
+  <button onclick="runPrint()">Sort Numbers</button>
+
+  <script>
+/*
+================================================
+; Title: Discussion Board 1.1
+; Author: Nathaniel D. Liebhart
+; Date: 2 June 2019
+; Modified By: Justin Singleton
+; Description: This program has errors that were
+; corrected after the fact as detailed below.
+================================================
+*/
+//Added comma in between 96 and 53 to separate their values
+      var numbers = [ 
+      1, 107, 96, 53, 6
+    ];
+
+    // This will display the numbers array in the paragraph with the id of nums
+    document.getElementById("nums").innerHTML = (numbers + " ");
+
+    // this function is used to sort the array of numbers
+//Added return before a - b so that the function returns a result
+    function runPrint() {
+      numbers.sort(function(a,b){
+         return a - b
+      });
+      // this will display the sorted array in the paragraph with the id of nums
+      document.getElementById("nums").innerHTML = (numbers + " ");
+    }
+  </script>
+</body>
+</html>
