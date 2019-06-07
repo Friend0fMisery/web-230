@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<script>
+/* 
+====================================================================
+; Title:  Alert message.  
+; Author: Karie Funk
+; Modified by: Justin Singleton
+; Date: 6 June 2019 
+; Class: WEB231 1.1 Values and Variables 
+; Description: This program was made intentionally with mistakes. 
+; The mistakes have been corrected and are in detail below.
+ ==================================================================
+ */ 
+
+//specify message to alert
+var alertMessage="This is an alert message \n https://github.com/kfunk17";
+//alertmessage -> alertMessage for correct syntax
+
+var once_per_session=1;
+
+
+function get_cookie(Name) {
+  var search = Name + "="; //Added semicolon to allow separation of statements
+  var returnValue = ""; //returnvalue -> returnValue for correct syntax
+  if (document.cookie.length > ) {
+    offset = document.cookie.indexOf(search)
+    if (offset != -1) { // if cookie exists
+      offset += search.length
+      // set index of beginning of value
+      end = document.cookie.indexOf(";", offset);
+      // set index of end of cookie value
+      if (end == -1)
+         end = document.cookie.length;
+      returnValue=unescape(document.cookie.substring(offset, end))
+      }
+   }
+  return returnValue; //Returnvalue -> returnValue for correct syntax
+}
+
+function alertOrNot(){ //alertornot -> alertOrNot for correct syntax
+if (get_cookie('alerted')==''){
+loadAlert() //loadalert -> loadAlert for correct syntax
+document.cookie="alerted=yes"
+}
+}
+
+function loadAlert(){
+alert(alertMessage); 
+}
+
+if (once_per_session==0)
+loadAlert(); //semicolon added to allow separation of statements
+else
+alertOrNot()
+
+</script>
+
+</head>
+</html>
