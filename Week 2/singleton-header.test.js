@@ -2,7 +2,7 @@
 ============================================
 ; Title: Assignment 1.4
 ; Author: Justin Singleton
-; Date: 25 June 2019
+; Date: 6 June 2019
 ; Description: Displays a formatted header.
 ;===========================================
 */

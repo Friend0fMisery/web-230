@@ -2,8 +2,7 @@
 ============================================
 ; Title:  header.js
 ; Author: Justin Singleton
-; Date:   25 June 2017
-; Modified By: N/A
+; Date:   6 June 2019
 ; Description: Displays a formatted header
 ;===========================================
 */
