@@ -10,7 +10,7 @@
 
 const header = require('./singleton-header.js');
 
-console.log(header.display("Justin", "Singleton", "Week 2"));
+console.log(header.display("Justin", "Singleton", "Function Properties 2.3"));
 
 function myName() {
     return myName.justin
