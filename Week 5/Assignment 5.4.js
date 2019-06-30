@@ -12,39 +12,40 @@
 const header = require('./singleton-header.js');
 
 console.log(header.display("Justin", "Singleton", "Assignment 5.4"));
-
+// create variable with sets of information for later usage
 var composers = [
   {
   firstName: 'Ludwig',
   lastName: 'Beethoven',
-  genre: 'classical',
+  genre: 'Classical',
   rating: 10
   },
   {
   firstName: 'James',
   lastName: 'Hetfield',
-  genre: 'metal',
+  genre: 'Metal',
   rating: 8
   },
   {
   firstName: 'Michael',
   lastName: 'Jackson',
-  genre: 'pop',
+  genre: 'Pop',
   rating: 9
   },
   {
   firstName: 'Elvis',
   lastName: 'Presley',
-  genre: 'rock',
+  genre: 'Rock',
   rating: 6
   },
   {
   firstName: 'John',
   lastName: 'Lennon',
-  genre: 'rock',
+  genre: 'Rock',
   rating: 9
   },
 ]
+// create variables to access information within sets of composers variable
 var lastNames = composers.map(function (composer) {
   return composer.lastName
 })
@@ -56,15 +57,17 @@ var genres = composers.map(function (composer) {
 })
 
 console.log("\n" + "-- COMPOSER BY RATING --");
-
-lastNames.some("Lennon").forEach(function(lastName) {
-  console.log("Composer: " + lastName)
-  ratings.map(function(rating) {
-  console.log("Rating: " + rating + "\n")}
-)})
+// prints all corresponding ratings and composers names together
+lastNames.forEach (function(values) {
+  console.log("Rating: " + ratings.shift())
+  console.log("Composer: " + values + "\n")
+  }
+)
 
 console.log("-- COMPOSER BY GENRE --");
-
-lastNames.forEach (function(lastName) {
-  console.log("Genre: " + genre + "\n" + "Composer: " + lastName + "\n")
-})
+// prints all corresponding genres and composers names together
+lastNames.forEach (function(values) {
+  console.log("Genre: " + genres.shift())
+  console.log("Composer: " + values + "\n")
+  }
+)
