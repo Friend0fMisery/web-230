@@ -1,10 +1,10 @@
 /*
 =================================================================
 ; Title:  Assignment 6.1 with two errors in code.
-; Author: developerdrive.com
-; Modified by: Karie Funk
-; Date:   03 July 2019
-; Description: Creating an object, with error.
+; Author: Karie Funk
+; Modified by: Justin Singleton
+; Date:   07 July 2019
+; Description: Creating an object, with error. CORRECTED
 ;================================================================
 */
 
