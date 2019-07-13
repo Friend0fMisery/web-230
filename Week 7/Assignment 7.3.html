@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 7.3</title>
+  <link rel="stylesheet" href="../Week 7/site.css">
+</head>
+<body>
+<script>
+  /*
+============================================
+; Title: Assignment 7.3
+; Author: Justin Singleton
+; Date: 13 July 2019
+; Description: This program demonstrates the
+; use of client-side JavaScript.
+;===========================================
+*/
+  document.write(
+    "<h1>SHOPPING LIST v.1</h1>" +
+    "<ol>" +
+      "<li>Oranges</li>" +
+      "<li>Apples</li>" +
+      "<li>Pears</li>" +
+      "<li>Limes</li>" +
+      "<li>Lemons</li>" +
+    "</ol>")
+</script>
+<div id="list"></div>
+<script>
+  document.getElementById("list").innerHTML = "<h1>SHOPPING LIST v.2</h1>" +
+  "<table>" +
+    "<thead>" +
+      "<tr>" +
+        "<th>ID</th>" +
+        "<th>Item</th>" +
+      "</tr>" +
+    "</thead>" +
+    "<tbody>" +
+      "<tr><td>1</td><td>Oranges</td></tr>" +
+      "<tr><td>2</td><td>Apples</td></tr>" +
+      "<tr><td>3</td><td>Pears</td></tr>" +
+      "<tr><td>4</td><td>Limes</td></tr>" +
+      "<tr><td>5</td><td>Lemons</td></tr>" +
+    "</tbody>" +
+  "</table>"
+</script>
+</body>
+</html>
