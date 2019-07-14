@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Discussion Board 7.1</title>
+
+	<style>
+		.accordian-wrapper {
+		box-shadow: 0px 0px 5px -4px #000;
+		border: 1px solid #FFF;
+		margin-bottom: .75em;
+		}
+		button.accordion {
+		background-color: #F8F8F8;
+		border: none;
+		font-size: 1.25em;
+		cursor: pointer;
+		outline: none;
+		padding: .5em 1.25em;
+		text-align: left;
+		transition: 0.8s;
+		width: 100%;
+		}
+		button.active, button.accordion:hover {
+		background-color: #D5E9CD;
+		color: #336633;
+		}
+		button.accordion:after {
+		content: '\002B';
+		float: right;
+		}
+		.active:after {
+		content: "\2212";
+		}
+		.details {
+		background-color: #EFFAEA;
+		color: #336633;
+		max-height: 0;
+		overflow: hidden;
+		padding: 0 1.5em;
+		transition: max-height 0.2s ease-out;
+		}
+	</style>
+</head>
+<body>
+	<!--
+ 	Title:  auger-discussion-board-7.1.js
+	Author: April Auger
+	Modified By: Justin Singleton
+ 	Date: 14 July 2019
+  Description: Program outputs a collapsible accordion. There are two errors.
+  CORRECTED
+	-->
+  <h1>Frequently Asked Questions</h1>
+
+	<div class="accordian-wrapper">
+		<button class="accordion">Question 1</button>
+		<div class="details">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna
+			aliqua. Utenim adminim veniam, quisnostrud exercitation ullamco laboris nisiut aliquip exea commodo consequat.</p>
+		</div>
+	</div>
+
+	<div class="accordian-wrapper">
+		<button class="accordion">Question 2</button>
+		<div class="details">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna
+			aliqua. Utenim adminim veniam, quisnostrud exercitation ullamco laboris nisiut aliquip exea commodo consequat.</p>
+		</div>
+	</div>
+
+	<div class="accordian-wrapper">
+		<button class="accordion">Question 3</button>
+		<div class="details">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna
+			aliqua. Utenim adminim veniam, quisnostrud exercitation ullamco laboris nisiut aliquip exea commodo consequat.
+			</p>
+		</div>
+	</div>
+
+	<script>
+		var accordian = document.getElementByClass("accordion"); // changed Elements to Element //
+		for (let i = 0; i < accordion.length; i++) { // changed accord to accordion //
+			accordion[i].addEventListener("click", function () {
+				this.classList.toggle("active");
+				var details = this.nextElementSibling;
+				if (details.style.maxHeight) {
+					details.style.maxHeight = null;
+				} else {
+					details.style.maxHeight = details.scrollHeight + "px";
+				}
+			});
+		}
+	</script>
+</body>
+</html>

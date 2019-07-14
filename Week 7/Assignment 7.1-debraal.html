@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    ==========================================
+    Title: Discussion Board 7.1
+           JavaScript in Web Browsers
+    Author: Rita DeBraal
+    Modified by: Justin Singleton
+    Date: July 14, 2019
+    Description: Find 2 errors CORRECTED
+    ==========================================
+-->
+
+  <head>
+    <title>Using getElementById</title>
+    <meta charset="UTF-8">
+    <!-- JavaScript to apply the IDs -->
+    <script>
+      function calculateMPG(miles, gallons) { // changed const to function //
+        document.getElementById("displayMiles").innerHTML = parseInt(miles); // changed inerHTML to innerHTML //
+        document.getElementById("displayGallons").innerHTML = parseInt(gallons);
+        document.getElementById("displayMPG").innerHTML = miles / gallons; // added . between document and getElementByID //
+      }
+    </script>
+  </head>
+
+  <body> <!-- Display the output of calculations -->
+    <p>
+      You drove <span id="displayMiles"></span> miles.
+    </p>
+
+    <p>
+      You used <span id="displayGallons"></span> gallons of gas.
+    </p>
+
+    <p>
+      Your MPG is <span id="displayMPG"></span>.
+    </p>
+    <!-- Variable declarations and calculation -->
+    <script>
+      var milesDriven = prompt('Enter miles driven');
+      var gallonsGas = prompt('Enter the gallons of gas used');
+      calculateMPG(milesDriven, gallonsGas);
+    </script>
+  </body>
+</html>
