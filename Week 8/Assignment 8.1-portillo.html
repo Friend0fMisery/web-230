@@ -1,0 +1,53 @@
+
+<!---
+============================================
+ Title:  Discussion Board-8.1.html
+ Author: Wendy Portillo
+ Modified By: Justin Singleton
+ Date:   July 21, 2019
+ Description: Discussion-DOM Manipulation jQuery (find two errors)
+ CORRECTED
+===========================================
+--->
+<script type="text/javascript">
+function display(firstName, lastName, assignment) {
+	let output = '\n' + firstName + ' ' + lastName + '\n' + assignment + '\nDate: ' +
+	new Date().toLocaleDateString('en-US')
+	return output
+}
+// Outputs the header to the console
+console.log(display("Wendy", "Portillo", "Exercise 8.1") + '\n');
+</script>
+<html>
+  <head>
+  <title>My Sample</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript">
+  var new_num = 40; // global variable
+  jQuery(document).ready(function(){
+    // http://api.jquery.com/css/   // ADDED TWO / TO THIS LINE //
+    $('p').css({border: '5px solid red', color: 'green', padding: '20px'});
+    // http://api.jquery.com/bind/
+    // http://api.jquery.com/css/
+    // http://api.jquery.com/text/
+    $('#countMe').css({  // CHANGED countme TO countME //
+      margin: '0 auto',
+      backgroundColor: '#ccc',
+      textAlign: 'center',
+      fontSize: '40px'
+    }).bind('click mousemove', function(){
+      var current = parseInt($(this).text(), 10);
+      new_num = new_num + 1
+      (this).text(current+1).css({fontSize: new_num+'px'})
+    });
+  });
+  // ADDED / TO BEGINNING OF SCRIPT TO END THE SCRIPT TAG //
+  </script>
+  </head>
+  <body>
+    <p>Hello</p>
+    <p>World</p>
+    <div id="countMe">0</div>
+    <a href="http://api.jquery.com/">Learn more about jQuery's methods</a>
+  </body>
+  </html>
