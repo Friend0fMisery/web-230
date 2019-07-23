@@ -1,0 +1,110 @@
+<!--
+/*
+============================================
+; Title: Assignment 8.4
+; Author: Justin Singleton
+; Date: 22 July 2019
+; Description: This program demonstrates the
+; use of DOM manipulation.
+;===========================================
+*/
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Assignment 8.4</title>
+    <!-- jQuery link -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="site.css">
+
+    <style type="text/css">
+      #emps tbody tr:hover {
+        cursor: pointer;
+        background-color: #ffff99;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="emps"></div>
+
+    <script type="text/javascript">
+    // create employees array with constructor //
+    var employees = [];
+
+    var employee1 = new employee("1", "John", "Smith", "Cashier");
+    var employee2 = new employee("2", "Jane", "Short", "Salesman");
+    var employee3 = new employee("3", "Jerry", "Seinfeld", "Secretary");
+    var employee4 = new employee("4", "Jack", "Sharpton", "Salesman");
+    var employee5 = new employee("5", "Jessica", "Sparrow", "Manager");
+    // constructor //
+    function employee(id, first, last, title) {
+      this.id = id;
+      this.firstName = first;
+      this.lastName = last;
+      this.title = title;
+      this.pushToEmployees = function() {
+        employees.push(this);
+      }
+      this.pushToEmployees();
+    }
+    // function to alert employee information //
+    function getEmployee(id) {
+      for (var i=0; i < employees.length; i++) {
+        if (id === 0) {
+          alert(
+          employees[id].id + ' ' + employees[id].firstName + ' ' +
+          employees[id].lastName + ' ' + employees[id].title);
+          break;
+      } else if (id === 1) {
+          alert(
+          employees[id].id + ' ' + employees[id].firstName + ' ' +
+          employees[id].lastName + ' ' + employees[id].title);
+          break;
+      } else if (id === 2) {
+          alert(
+          employees[id].id + ' ' + employees[id].firstName + ' ' +
+          employees[id].lastName + ' ' + employees[id].title);
+          break;
+      } else if (id === 3) {
+          alert(
+          employees[id].id + ' ' + employees[id].firstName + ' ' +
+          employees[id].lastName + ' ' + employees[id].title);
+          break;
+      } else if (id === 4) {
+          alert(
+          employees[id].id + ' ' + employees[id].firstName + ' ' +
+          employees[id].lastName + ' ' + employees[id].title);
+          break;
+      }
+    }
+    };
+    // create table with employee information //
+    var out = "<h2>Employee Listing</h2><table>";
+
+    out += "<tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Title</th></tr>"
+
+    employees.forEach (function(item) {
+      out += "<tr class='table-tr' data-href='url://'>";
+      out += "<td>" + item.id + "</td>";
+      out += "<td>" + item.firstName + "</td>";
+      out += "<td>" + item.lastName + "</td>";
+      out += "<td>" + item.title + "</td>";
+      out += "</tr>";
+      })
+
+    out += "</table>";
+
+    document.getElementById('emps').innerHTML = out;
+    // function to click on row and call getEmployee function //
+    $(document).ready(function () {
+      $("table tr").click(function () {
+        var value = $(this).find('td:first').html();
+        getEmployee(parseInt(value) - 1);
+      })
+    });
+    </script>
+  </body>
+</html>

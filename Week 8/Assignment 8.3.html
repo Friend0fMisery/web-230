@@ -1,0 +1,91 @@
+<!--
+/*
+============================================
+; Title: Assignment 8.3
+; Author: Justin Singleton
+; Date: 22 July 2019
+; Description: This program demonstrates the
+; use of DOM manipulation with jQuery.
+;===========================================
+*/
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Assignment 8.3</title>
+    <h1 id="topBar">asdfasdfasdfd</h1>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="site.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <script>
+      // header
+      const header = require('./singleton-header.js');
+      console.log(header.display("Justin", "Singleton", "Assignment 8.3"));
+    </script>
+    <style>
+      #text {
+        font-family: 'Roboto', sans-serif;
+        margin-top: 20px;
+        margin-left: 20px;
+      }
+      tr:nth-child(even) {
+        background-color: lightgreen;
+      }
+      #topBar {
+        background-color: red;
+        color: red;
+      }
+    </style>
+  </head>
+  <body id="text">
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("button").click(function() {
+          $("p").toggle();
+        })
+      });
+    </script>
+    <h1>Title</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
+      volutpat turpis. Ut tempus erat quis scelerisque facilisis. Vivamus
+      efficitur elit eget ornare semper. Curabitur mattis lorem at aliquet
+      maximus. Suspendisse sodales faucibus metus, a consequat neque
+      tincidunt quis. Nullam sollicitudin condimentum felis sit amet
+      varius. Aenean semper commodo urna, eget aliquet est pulvinar eget.
+      Quisque tempus libero at ligula convallis, ut aliquet nibh mollis.
+      Vestibulum eros sem, rhoncus et justo sit amet, pulvinar viverra
+      metus. In hac habitasse platea dictumst.</p>
+    <button>Toggle</button>
+    <table>
+      <tr>
+        <td><a href="1" class="fruitId">1</a></td>
+        <td><href class="type">Apple</href></td>
+      </tr>
+      <tr>
+        <td><a href="2" class="fruitId">2</a></td>
+        <td><href class="type">Banana</a></td>
+      </tr>
+      <tr>
+        <td><a href="3" class="fruitId">3</a></td>
+        <td><href class="type">Cherry</href></td>
+      <tr>
+        <td><a href="4" class="fruitId">4</a></td>
+        <td><href class="type">Date</href></td>
+      <tr>
+        <td><a href="5" class="fruitId">5</a></td>
+        <td><href class="type">Elderberry</a></td>
+      </tr>
+    </table>
+    <script>
+      $(function () {
+        $(".fruitId").click(function (event) {
+          event.preventDefault();
+          var fruitId = $(this).text();
+          var type = $(this).closest("td").next().text();
+          alert("{fruitId: " + fruitId + ", type: " + type + "}");
+        });
+      });
+    </script>
+  </body>
+</html>

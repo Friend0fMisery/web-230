@@ -1,0 +1,70 @@
+<!--
+============================================
+; Title: Assignment 1.4
+; Author: Justin Singleton
+; Date: 25 June 2019
+; Modified By: <Your name>
+; Description: This program demonstrates the
+; use of JavaScript types, values, and
+; and variables in an application.
+;===========================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <h1 id="topBar">asdfasdfasdfd</h1>
+    <title>Assignment 8.2</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <style>
+      #topBar {
+        background-color: red;
+        color: red;
+      }
+      #fruits {
+        margin: 0 auto;
+        margin-top: 20px;
+        font-family: 'Roboto';
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="topBar">asdfasdfasdfd</h1>
+    <div id="fruits"></div>
+
+    <script>
+      var fruits = [
+        {
+          id: "a1",
+          type: "Apple",
+        },
+        {
+          id: "b2",
+          type: "Banana",
+        },
+        {
+          id: "c3",
+          type: "Cherry",
+        },
+        {
+          id: "d4",
+          type: "Date",
+        },
+        {
+          id: "e5",
+          type: "Elderberry",
+        },
+      ];
+
+      var out = "<h2>Fruit</h2><ul>";
+
+      fruits.forEach (function(item) {
+        out += "<li>" + item.type + " " + item.id + "</li>";
+      })
+
+      out += "</ul>";
+
+      document.getElementById('fruits').innerHTML = out;
+    </script>
+  </body>
+</html>
